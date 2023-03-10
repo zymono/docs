@@ -1,10 +1,10 @@
 ---
-title: "Get User"
-api: "GET https://api.mintlify.com/api/user"
-description: "This endpoint gets or creates a new user."
+title: "Create Panel"
+<!-- api: "GET https://api.mintlify.com/api/user" -->
+description: "Turn the page into your Zymono panel."
 ---
 
-### Body
+<!-- ### Body
 
 <ParamField body="name" type="string">
   This is the name of the user group.
@@ -65,37 +65,29 @@ The contents of the user group
 
 </Expandable>
 
-</ResponseField>
+</ResponseField> -->
 
 <RequestExample>
 
-```bash Example Request
-curl --location --request GET 'https://api.mintlify.com/api/user' \
---header 'Content-Type: application/json' \
---header 'Authorization: Token <token>' \
---data-raw '{
-    "user_group_id": "example_1",
-    "name": "Example 1",
-    "mapping": {"40": "213", "134": "386"},
-    "properties": {"filterValue": "value"}
-}'
+```html Example Request
+<iframe src="https://api.zymono.com/panel/" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;">
+<script type="module" id="zymonoPanel">
+  import { createPanel } from 'https://api.zymono.com/panel.js'
+  createPanel('Your_Panel_Key_Here')
+</script>
 ```
 
 </RequestExample>
 
-<ResponseExample>
+<RequestExample>
+Experimental Request
+```html Example Request
+<script src="https://api.zymono.com/panel-nonmodular.js"></script>
+<iframe src="https://api.zymono.com/panel/" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;">
+<script>
+    createPanel('Your_Panel_Key_Here')
+</script>
 
-```json Response
-{
-  "success": 1,
-  "new_user_group": true,
-  "user_group": {
-    "team_id": 3,
-    "token": "<user_group_token_to_auth_dashboard>",
-    "name": "Example 1",
-    "provided_id": "example_1"
-  }
-}
 ```
 
-</ResponseExample>
+</RequestExample>
