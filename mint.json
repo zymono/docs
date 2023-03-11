@@ -52,7 +52,7 @@
       "pages": [
         "api-reference/endpoint/get",
         "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
+        "api-reference/url%20paramaters",
         "api-reference/endpoint/delete"
       ]
     }
