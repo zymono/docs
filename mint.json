@@ -45,7 +45,7 @@
     },
     {
       "group": "API Documentation",
-      "pages": ["api-reference/authentication"]
+      "pages": ["api-reference/authentication", "api-reference/url paramaters"]
     },
     {
       "group": "Endpoint Examples",
