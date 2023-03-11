@@ -11,7 +11,6 @@ description: "Find all the information about how to use Zymono and it's API here
 <Tip>
   Zymono's API is free to use, consider <a href="https://zymono.com/donate">donating</a> or <a href="https://zymono.com/contribute">contributing</a>.
 </Tip>
-## TEST
 
 ## Quick links
 <CardGroup>
@@ -25,25 +24,34 @@ description: "Find all the information about how to use Zymono and it's API here
 </CardGroup>
 
 <AccordionGroup>
-  <Accordion title="FAQ without Icon">
-    You can put other components inside Accordions.
+  <Accordion title="Add a Zymono button">
+    Use The Zymono API To Embed A Button Into Any Webpage That Launches Your Zymono Report Page.
 
-    ```java HelloWorld.java
-    class HelloWorld {
-        public static void main(String[] args) {
-            System.out.println("Hello, World!");
-        }
-    }
+    ```javascript reportButton.js
+    <script type="module" id="zymono-script">
+    //THIS CODE WAS MADE FOR THE ZYMONO API AND FOLLOWS OUR API LICENSE. 
+    //https://github.com/zymono/API/LICENSE.md
+    
+    //https://github.com/zymono/API
+    
+    window.sessionStorage.setItem('gameID', 'Your_Panel_ID_HERE')
+    
+    import { createButton, report } from 'https://api.zymono.com/api.js'
+
+    createButton()
+</script>
     ```
-
   </Accordion>
 
-  <Accordion title="FAQ with Icon" icon="alien-8bit">
-    Check out the [Accordion](/components/accordion) docs for all the supported props.
+  <Accordion title="How to find panel ID">
+    Go to https://zymono.com/me/ and under Panel Key, click `Click to reveal key`. Copy the following key to your clipboard!
   </Accordion>
 
-  <Accordion title="FAQ without Icon">
-    Check out the [Accordion](/components/accordion) docs for all the supported props.
+  <Accordion title="API safety">
+    Make sure to store all instances of your panel key in an environment variable. Your panel key must remain hidden otherwise users can access the API on your behalf.
+  </Accordion>
+   <Accordion title="What's the API">
+    The Zymono API gives you the ability to turn any iframe into a Zymono panel where you can manage reports without having every user authenticate and go through the collaboration process.
   </Accordion>
 </AccordionGroup>
 
@@ -57,8 +65,8 @@ Get help with our API or other Zymono products
   <Card title="Discord" icon="discord" href="https://dsc.gg/zymono">
     Our Discord community
   </Card>
-  <Card title="Email" icon="letter" href="mailto:info@zymono.com">
-    Email us with your queries
+  <Card title="Github" icon="letter" href="//github.com/zymono/API">
+    Find full information about the API on Github.
   </Card>
 
 </CardGroup>
